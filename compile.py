@@ -13,7 +13,7 @@ from jinja2 import Template
 from python_lib import content_loader
 from python_lib import renderer
 
-DEFAULT_VERBOSITY = 2
+DEFAULT_VERBOSITY = 0
 
 DIR_ROOT = os.path.dirname(os.path.abspath(__file__))
 DIR_SRC = os.path.join(DIR_ROOT, 'source')
@@ -22,7 +22,7 @@ DIR_OUTPUT = os.path.join(DIR_ROOT, 'output')
 
 def main():
     """Main execution function."""
-    verbosity = 2
+    verbosity = 1
     compile_all(verbosity)
 
 

@@ -5,6 +5,7 @@ over all other files to the output directory.
 """
 import os
 import json
+import shutil
 from jinja2 import Environment, FileSystemLoader, Template
 
 
@@ -24,26 +25,26 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
     def recurse(dir_content, dir_output, meta_tree):
         os.makedirs(dir_output, exist_ok=True)  # make dir if doesn't exist
 
-        for filename in os.listdir(dir_content):
-            file_in_path = os.path.join(dir_content, filename)
+        if 'meta' in meta_tree:
+            # build an HTML output file if the meta specifies a template to use
             my_meta = meta_tree['meta']
+            if 'template' in my_meta.keys():
+                template = template_env.get_template(my_meta['template'])
+                rendered = template.render(meta_tree)
+                file_out_path = os.path.join(dir_output, 'index.html')
+                with open(file_out_path, 'w') as file:
+                    file.write(rendered)
 
-            if filename == 'meta.json':
-                # build an HTML output file if the meta specifies a template to use
-                if 'template' in my_meta.keys():
-                    template = template_env.get_template(my_meta['template'])
-                    rendered = template.render(meta_tree)
-                    file_out_path = os.path.join(dir_output, 'index.html')
-                    with open(file_out_path, 'w') as file:
-                        file.write(rendered)
+        for file_name in os.listdir(dir_content):
+            file_path = os.path.join(dir_content, file_name)
 
-            elif os.path.isdir(file_in_path):
+            if os.path.isdir(file_path):
                 # render the child directory, scoped to its own child meta tree
-                recurse(file_in_path, os.path.join(dir_output, filename),
-                        meta_tree['children'][filename])
+                recurse(file_path, os.path.join(dir_output, file_name),
+                        meta_tree['children'][file_name])
 
-            elif os.path.isfile(file_in_path):
-                # TODO: copy file to output director
-                pass
-
+            elif os.path.isfile(file_path) and file_name != 'meta.json':
+                # copy file to output director
+                # copy2 copies metadata and permissions into a directory
+                shutil.copy2(file_path, dir_output)
     recurse(dir_content, site_out, meta_tree)

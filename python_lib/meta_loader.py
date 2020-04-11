@@ -12,7 +12,7 @@ def __children_sort_key(item_tuple):
     try:
         return item_tuple[1]['meta']['order']
     except KeyError:
-        return 0
+        return 0  # defult sort to back
 
 
 def load_meta_tree(content_in):

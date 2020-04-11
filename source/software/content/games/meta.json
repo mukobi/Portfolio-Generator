@@ -1,4 +1,5 @@
 {
     "template": "category.html",
+    "order": 3,
     "title": "Games"
 }

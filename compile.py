@@ -10,7 +10,7 @@ import json
 import shutil
 from jinja2 import Template
 
-from python_lib import content_loader
+from python_lib import meta_loader
 from python_lib import renderer
 
 DEFAULT_VERBOSITY = 0
@@ -22,7 +22,7 @@ DIR_OUTPUT = os.path.join(DIR_ROOT, 'output')
 
 def main():
     """Main execution function."""
-    verbosity = 1
+    verbosity = 2
     compile_all(verbosity)
 
 
@@ -44,7 +44,7 @@ def compile_individual(name, verbosity=DEFAULT_VERBOSITY):
     shutil.rmtree(dir_output, ignore_errors=True)
 
     # load in stuff
-    meta_tree = content_loader.load_meta_tree(dir_input_content)
+    meta_tree = meta_loader.load_meta_tree(dir_input_content)
     if verbosity >= 2:
         print(json.dumps(meta_tree, indent=2))
 

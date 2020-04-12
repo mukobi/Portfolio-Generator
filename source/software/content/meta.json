@@ -1,5 +1,6 @@
 {
     "template": "home.html",
     "page": "home",
-    "title": "Sticks and Stones Software"
+    "title": "Sticks and Stones Software",
+    "description": "Sticks and Stones Software is a software development company founded and operated by <a href='http://gabrielmukobi.com'>Gabriel Mukobi</a> that develops games, websites, desktop solutions, and mobile applications. As its name implies, Sticks and Stones is committed to creating simple yet effective software solutions to interesting problems."
 }

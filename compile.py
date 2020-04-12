@@ -8,12 +8,13 @@ Usage:
 import os
 import json
 import shutil
+import argparse
 from jinja2 import Template
 
 from python_lib import meta_loader
 from python_lib import renderer
 
-DEFAULT_VERBOSITY = 0
+DEFAULT_VERBOSITY = 1
 
 DIR_ROOT = os.path.dirname(os.path.abspath(__file__))
 DIR_SRC = os.path.join(DIR_ROOT, 'source')
@@ -22,17 +23,25 @@ DIR_OUTPUT = os.path.join(DIR_ROOT, 'output')
 
 def main():
     """Main execution function."""
-    verbosity = 2
-    compile_all(verbosity)
+    # parse args
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-v', '--verbosity',
+        help='Verbosity level. 0 is lowest, higher is more verbose.',
+        default=1, type=int)
+    args = parser.parse_args()
+
+    # run compilation
+    compile_all(args.verbosity)
 
 
-def compile_all(verbosity=DEFAULT_VERBOSITY):
+def compile_all(verbosity):
     """Compiles all site at once."""
     for name in os.listdir(DIR_SRC):
         compile_individual(name, verbosity)
 
 
-def compile_individual(name, verbosity=DEFAULT_VERBOSITY):
+def compile_individual(name, verbosity):
     """Compiles only the site matching name `name`."""
     # get input folders
     dir_input = os.path.join(DIR_SRC, name)

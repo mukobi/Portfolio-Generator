@@ -1,4 +1,5 @@
 {
     "template": "home.html",
+    "page": "home",
     "title": "Sticks and Stones Software"
 }

@@ -1,4 +1,6 @@
 {
-    "template": "category.html",
-    "title": "Web"
+    "template": "categories/web.html",
+    "page": "web",
+    "title": "Web",
+    "description": "Check out some of the websites and web apps that Sticks and Stones Software has developed on this page. These site use tools and technologies like HTML5, CSS3, JavaScript, jQuery, React, Flask, Bootstrap, Wordpress, responsive design, and cross-browser support."
 }

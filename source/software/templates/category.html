@@ -2,6 +2,12 @@
 
 {%set root = '..'%}
 
+{% block stylesheet %}
+{{ super() }}
+{# TODO: eliminate default style in the 2 stylesheets #}
+<link rel="stylesheet" href="{{root}}/res/css/style_sub.css" />
+{% endblock %}
+
 {% block body %}
 {% include 'components/navigation.html' %}
 <div class="head">

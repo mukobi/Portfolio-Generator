@@ -1,5 +1,3 @@
-{
-    "page": "Sticks and Stones Software",
-    "external_link": "https://software.gabrielmukobi.com/",
-    "description": "Sticks and Stones (the website that you are currently viewing) is the site for Sticks and Stones Software, a software development company founded and operated by Gabriel Mukobi that develops games, websites, desktop solutions, and mobile applications. As its name implies, Sticks and Stones is committed to creating simple yet effective software solutions to interesting problems."
-}
+page: Sticks and Stones Software,
+external_link: https://software.gabrielmukobi.com/,
+description: Sticks and Stones (the website that you are currently viewing) is the site for Sticks and Stones Software, a software development company founded and operated by Gabriel Mukobi that develops games, websites, desktop solutions, and mobile applications. As its name implies, Sticks and Stones is committed to creating simple yet effective software solutions to interesting problems.

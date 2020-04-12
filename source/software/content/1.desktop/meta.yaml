@@ -1,4 +1,4 @@
-template: categories/desktop.html,
-page: desktop,
-title: Desktop - Sticks and Stones Software,
+template: categories/desktop.html
+page: desktop
+title: Desktop - Sticks and Stones Software
 description: Find some of the desktop software developed by Sticks and Stones Software here. I build for desktop using such technologies as Java, Python, C++, C#, .NET, and XNA.

@@ -1,5 +1,5 @@
-template: categories/web.html
-page: web
-title: Web - Sticks and Stones Software
+template: categories/mobile.html
+page: mobile
+title: mobile - Sticks and Stones Software
 description: |
-  Check out some of the websites and web apps that I've developed on this page. These site use tools and technologies like HTML5, CSS3, JavaScript, jQuery, React, Flask, Bootstrap, Wordpress, responsive design, and cross-browser support.
+  This page is currently in development, please check back soon!

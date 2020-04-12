@@ -1,6 +1,6 @@
 """Renders the static output files using Jinja2.
 
-This includes both loading meta.json files into a dictionary tree and copying
+This includes both loading meta.yaml files into a dictionary tree and copying
 over all other files to the output directory.
 """
 import os
@@ -12,7 +12,7 @@ from jinja2 import Environment, FileSystemLoader, Template
 def render_site(dir_content, site_out, meta_tree, dir_template):
     """Loads the meta files and copies over the other files for the given site.
 
-    Reads through the directory `content_in`. All `meta.json` files encountered
+    Reads through the directory `content_in`. All `meta.yaml` files encountered
     are built into a dictionary that is returned. All other files are copied
     over to `site_out`.
 
@@ -45,7 +45,7 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
                 recurse(file_path, os.path.join(dir_output, folder_name_without_numer),
                         meta_tree['children'][file_name])
 
-            elif os.path.isfile(file_path) and file_name != 'meta.json':
+            elif os.path.isfile(file_path) and file_name != 'meta.yaml':
                 # copy file to output director
                 # copy2 copies metadata and permissions into a directory
                 shutil.copy2(file_path, dir_output)

@@ -10,8 +10,8 @@ import collections
 def __children_sort_key(item_tuple):
     """Extracts the key for sorting from the child meta file."""
     try:
-        return item_tuple[1]['meta']['order']
-    except KeyError:
+        return int(item_tuple[0].split('.')[0])
+    except ValueError:
         return 0  # defult sort to back
 
 
@@ -36,7 +36,7 @@ def load_meta_tree(content_in):
         elif os.path.isdir(filepath):
             children[filename] = load_meta_tree(filepath)
 
-    # sort children by their 'order' meta key where higher orders will come first
+    # sort children by the number in their filename where higher orders will come first
     meta_tree['children'] = collections.OrderedDict(
         sorted(children.items(), key=__children_sort_key, reverse=True))
 

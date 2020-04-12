@@ -39,8 +39,10 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
             file_path = os.path.join(dir_content, file_name)
 
             if os.path.isdir(file_path):
+                # ignore order number from name in output
+                folder_name_without_numer = file_name.split('.')[-1]
                 # render the child directory, scoped to its own child meta tree
-                recurse(file_path, os.path.join(dir_output, file_name),
+                recurse(file_path, os.path.join(dir_output, folder_name_without_numer),
                         meta_tree['children'][file_name])
 
             elif os.path.isfile(file_path) and file_name != 'meta.json':

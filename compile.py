@@ -27,8 +27,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '-v', '--verbosity',
-        help='Verbosity level. 0 is lowest, higher is more verbose.',
-        default=1, type=int)
+        help='Verbosity level, 0 is least verbose.',
+        default=1, type=int, choices=range(0, 3))
     args = parser.parse_args()
 
     # run compilation

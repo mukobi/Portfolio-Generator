@@ -1,3 +1,4 @@
 page: Wikipedia Viewer,
-external_link: 
-description: 
+external_link: https://codepen.io/mukobi/full/wqEajy/
+description: |
+  Allows you to go to a random Wikipedia article, search for an article on Wikipedia, and explore your search results all in a Wikipedia themed tool.

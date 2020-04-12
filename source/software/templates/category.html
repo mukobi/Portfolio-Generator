@@ -27,7 +27,7 @@
     {% for key, value in children.items() %}
     <div class="single_content">
         <a href="{{value.meta.external_link if 'external_link' in value.meta else './' + key}}">
-            <img src="./key/thumbnail.jpg" />
+            <img src="./{{key}}/thumbnail.jpg" />
             <h3>{{value.meta.page}}</h3>
             <p class="content_description line_white_space">
                 {{value.meta.description}}

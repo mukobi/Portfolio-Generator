@@ -37,7 +37,10 @@ def load_meta_tree(content_in):
             children[filename] = load_meta_tree(filepath)
 
     # sort children by the number in their filename where higher orders will come first
-    meta_tree['children'] = collections.OrderedDict(
-        sorted(children.items(), key=__children_sort_key, reverse=True))
+    sorted_tuple = tuple([
+        (item[0].split('.', 1)[-1], item[1]) for item in
+        sorted(children.items(), key=__children_sort_key, reverse=True)])
+    # tuple((key.split('.')[1:], value) for key, value in
+    meta_tree['children'] = collections.OrderedDict(sorted_tuple)
 
     return meta_tree

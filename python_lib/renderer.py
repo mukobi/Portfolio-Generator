@@ -40,10 +40,10 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
 
             if os.path.isdir(file_path):
                 # ignore order number from name in output
-                folder_name_without_numer = file_name.split('.')[-1]
+                folder_name_without_numer = file_name.split('.', 1)[-1]
                 # render the child directory, scoped to its own child meta tree
                 recurse(file_path, os.path.join(dir_output, folder_name_without_numer),
-                        meta_tree['children'][file_name])
+                        meta_tree['children'][folder_name_without_numer])
 
             elif os.path.isfile(file_path) and file_name != 'meta.yaml':
                 # copy file to output director

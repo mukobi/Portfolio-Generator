@@ -1,5 +1,6 @@
 {
-    "template": "category.html",
+    "template": "categories/games.html",
     "page": "games",
-    "title": "Games - Sticks and Stones Software"
+    "title": "Games - Sticks and Stones Software",
+    "description": "Various virtual reality, flatscreen, and other games that I've built (or am currently building). The tools used to make these games include Unity, Blender, GIMP, C++, C#, DirectX, OpenGL, and HLSL."
 }

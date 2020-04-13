@@ -1,4 +1,4 @@
-page: Weather App,
+page: Weather App
 external_link: https://codepen.io/mukobi/full/GvxKMz/
 description: |
   A simple app that uses geolocation and a weather API to display your current location, the temperature, and the current type of weather with a corresponding image.

@@ -1,55 +1,56 @@
-{"particles":{
-    "number":{
-      "value":80
+{
+  "particles": {
+    "number": {
+      "value": 80
     },
-    "color":{
-      "value":"random"
+    "color": {
+      "value": "random"
     },
-    "shape":{
-      "type":"image",
-      "image":{
-        "src":"images/other/android.png",
-        "height":100,
-        "width":85
+    "shape": {
+      "type": "image",
+      "image": {
+        "src": "./android.png",
+        "height": 100,
+        "width": 85
       }
     },
-    "opacity":{
-      "value":1,
-      "random":true,
-      "anim":{
-        "enable":true,
-        "speed":0.2,
-        "sync":false
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "sync": false
       }
     },
-    "size":{
-      "value":35,
-      "random":true
+    "size": {
+      "value": 35,
+      "random": true
     },
-    "line_linked":{
-      "enable":true,
-      "distance":0
+    "line_linked": {
+      "enable": true,
+      "distance": 0
     },
-    "move":{
-      "out_mode":"bounce",
-      "speed":3,
-      "random":true,
-      "direction":"none",
-      "bounce":true
+    "move": {
+      "out_mode": "bounce",
+      "speed": 3,
+      "random": true,
+      "direction": "none",
+      "bounce": true
     }
   },
-  "interactivity":{
-    "detect_on":"window",
-    "events":{
-      "onhover":{
-        "enable":true,
-        "mode":"bubble"
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
       }
     },
-    "modes":{
-      "bubble":{
-        "distance":150,
-        "size":60
+    "modes": {
+      "bubble": {
+        "distance": 150,
+        "size": 60
       }
     }
   }

@@ -1,0 +1,4 @@
+page: PSU Pozyx
+external_link: https://github.com/mukobi/pozyx-clone
+description: |
+  This is a large piece of desktop software I built while interning at Ralf Widenhorn's physics lab at Portland State University. For this project, I developed, implemented, and tested software interfacing with Pozyx, a high accuracy localized positioning system, with applications as a learning tool for hands-on college-level physics courses, as an advanced position and motion data collection device for professional athletes, and as a solution for other high precision localized positioning applications.

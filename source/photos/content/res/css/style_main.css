@@ -15,7 +15,7 @@ body {
 }
 
 .photo-container {
-    margin: 2px;
+    margin: 1px;
     flex-basis: 0;
     overflow-x: hidden;
     width: 100%;
@@ -26,8 +26,9 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    transition: all 1000ms ease-out 40ms;
+    transition: transform 1000ms ease;
     transform: scale(1);
+    will-change: transform;
 }
 
 .photo-container:hover img,

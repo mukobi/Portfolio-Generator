@@ -19,10 +19,18 @@ body {
     flex-basis: 0;
     overflow-x: hidden;
     width: 100%;
+    overflow: hidden;
 }
 
 .photo-container img {
     width: 100%;
     height: auto;
     display: block;
+    transition: all 1000ms ease-out 40ms;
+    transform: scale(1);
+}
+
+.photo-container:hover img,
+.photo-container:focus img {
+    transform: scale(1.2);
 }

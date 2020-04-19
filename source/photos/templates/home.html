@@ -11,7 +11,7 @@
     </div>
     <div class="links">
         <a href="https://gabrielmukobi.com"><i class="fas fa-globe"></i></a>
-        <a href="mailto:gmukobi@stanford.edu"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:gmukobi@stanford.edu?Subject=Photography Inquiry"><i class="fas fa-envelope"></i></a>
         <a href="https://www.instagram.com/gabe_mukobi"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/channel/UCyOdMevTIzx8fsWWUpc3IQg"><i class="fab fa-youtube"></i></a>
         <a href="https://www.linkedin.com/in/gabrielmukobi"><i class="fab fa-linkedin"></i></a>
@@ -27,7 +27,11 @@
 
     {% set dimensions = photo.split('.')[-2].split('x') %}
     {% set aspect_ratio = dimensions[0]|float / dimensions[1]|float %}
-    <a href="#" class="photo-container"
+    {% set photo_source = './Albums/' + year + '/' + album + '/' + photo %}
+    {% set url = album_content.meta.external_link 
+        if album_content.meta.external_link is defined
+        else photo_source %}
+    <a href="{{url}}" class="photo-container"
         style="flex-grow: {{aspect_ratio}}; min-width: min(100vw, {{360 * aspect_ratio}}px)">
         <img src="./Albums/{{year}}/{{album}}/{{photo}}" />
     </a>

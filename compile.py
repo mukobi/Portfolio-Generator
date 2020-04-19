@@ -29,10 +29,16 @@ def main():
         '-v', '--verbosity',
         help='Verbosity level, 0 is least verbose.',
         default=1, type=int, choices=range(0, 3))
+    parser.add_argument(
+        'site', nargs='?', default=None,
+        help='Name of an individual source project to compile')
     args = parser.parse_args()
 
     # run compilation
-    compile_all(args.verbosity)
+    if args.site == None:
+        compile_all(args.verbosity)
+    else:
+        compile_individual(args.site, args.verbosity)
 
 
 def compile_all(verbosity):

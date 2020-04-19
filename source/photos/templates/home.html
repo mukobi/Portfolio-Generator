@@ -3,18 +3,22 @@
 {%set root = '.'%}
 
 {% block body %}
-<div class="head">
-    <div class="wrapper">
-        <div class="title">
-            <h1>{{meta.header}}</h1>
-            <h2>By <a href="http://gabrielmukobi.com">Gabriel Mukobi</a></h2>
-        </div>
-        <div class="about">
-            <p>
-                {{ meta.description }}
-            </p>
-        </div>
+<div class="header">
+    <div class="title">
+        <h1 class="fixed">{{meta.header_title}}</h1>
+        <!-- duplicate h1 for positioning in title -->
+        <h1 class="transparent">{{meta.header_title}}</h1>
     </div>
+    <div class="links">
+        <a href="https://gabrielmukobi.com"><i class="fas fa-globe"></i></a>
+        <a href="mailto:gmukobi@stanford.edu"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/gabe_mukobi"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCyOdMevTIzx8fsWWUpc3IQg"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/gabrielmukobi"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
+<div class="about">
+</div>
 </div>
 <div class="content">
     {% for year, year_content in children.Albums.children.items() %}
@@ -32,4 +36,5 @@
     {% endfor %}
     {% endfor %}
 </div>
+<p class="fixed copyright">All images copyright &copy; 2019-2020 Gabriel Mukobi</p>
 {% endblock %}

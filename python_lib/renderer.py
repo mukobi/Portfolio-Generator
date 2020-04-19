@@ -25,7 +25,7 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
     def recurse(dir_content, dir_output, meta_tree):
         os.makedirs(dir_output, exist_ok=True)  # make dir if doesn't exist
 
-        if 'meta' in meta_tree:
+        if 'meta' in meta_tree and meta_tree['meta'] is not None:
             # build an HTML output file if the meta specifies a template to use
             my_meta = meta_tree['meta']
             if 'template' in my_meta.keys():

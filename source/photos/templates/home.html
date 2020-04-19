@@ -16,7 +16,17 @@
         </div>
     </div>
 </div>
-<div class="bottom">
-    {% include 'components/navigation.html' %}
+<div class="content">
+    {% for year, year_content in children.Albums.children.items() %}
+    {% for album, album_content in year_content.children.items() %}
+    {% for photo in album_content.files %}
+    <div class="single_content">
+        <a href="#">
+            <img src="./Albums/{{year}}/{{album}}/{{photo}}" />
+        </a>
+    </div>
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}

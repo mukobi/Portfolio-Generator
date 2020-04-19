@@ -20,13 +20,14 @@
     {% for year, year_content in children.Albums.children.items() %}
     {% for album, album_content in year_content.children.items() %}
     {% for photo in album_content.files %}
-    <div class="single_content">
-        <a href="#">
-            {% set dimensions = photo.split('.')[-2].split('x') %}
-            <img src="./Albums/{{year}}/{{album}}/{{photo}}"
-                style="flex-grow: {{dimensions[1]|float / dimensions[0]|float}}" />
-        </a>
-    </div>
+
+    {% set dimensions = photo.split('.')[-2].split('x') %}
+    {% set aspect_ratio = dimensions[0]|float / dimensions[1]|float %}
+    <a href="#" class="photo-container"
+        style="flex-grow: {{aspect_ratio}}; min-width: min(100vw, {{500 * aspect_ratio}}px)">
+        <img src="./Albums/{{year}}/{{album}}/{{photo}}" />
+    </a>
+
     {% endfor %}
     {% endfor %}
     {% endfor %}

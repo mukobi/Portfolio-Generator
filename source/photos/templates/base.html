@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{{root}}/res/css/style_main.css" />
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="{{root}}/res/js/script_main.js"></script>
+    {% block head_append %}{% endblock %}
+    <title>{{meta.title}}</title>
+</head>
+
+<body id="particles-js">
+    {% block body %}{% endblock %}
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+<script>
+    particlesJS.load('particles-js', '{{root}}/res/particles/{{meta.page}}.json', function () {
+        console.log('particles config file loaded');
+    });
+</script>
+
+</html>

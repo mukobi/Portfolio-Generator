@@ -36,6 +36,11 @@ def load_meta_tree(content_in):
         elif os.path.isdir(filepath):
             children[filename] = load_meta_tree(filepath)
 
+        elif os.path.isfile(filepath) and filename != 'meta.yaml':
+            if 'files' not in meta_tree.keys():
+                meta_tree['files'] = []
+            meta_tree['files'].append(filename)
+
     # sort children by the number in their filename where higher orders will come first
     sorted_tuple = tuple([
         (item[0].split('.', 1)[-1], item[1]) for item in

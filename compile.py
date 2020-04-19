@@ -51,12 +51,19 @@ def compile_individual(name, verbosity):
     """Compiles only the site matching name `name`."""
     # get input folders
     dir_input = os.path.join(DIR_SRC, name)
+    dir_input_precompile = os.path.join(dir_input, 'precompile')
     dir_input_templates = os.path.join(dir_input, 'templates')
     dir_input_content = os.path.join(dir_input, 'content')
+
     # get output folder
     dir_output = os.path.join(DIR_OUTPUT, name)
     # clean output folder
     shutil.rmtree(dir_output, ignore_errors=True)
+
+    # run precompile code
+    if os.path.exists(dir_input_precompile):
+        for executable_name in os.listdir(dir_input_precompile):
+            os.system(os.path.join(dir_input_precompile, executable_name))
 
     # load in stuff
     meta_tree = meta_loader.load_meta_tree(dir_input_content)

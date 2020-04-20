@@ -41,7 +41,7 @@ def main():
             new_file_path = base_name + dimension_string + file_extension
             os.rename(file_path, new_file_path)
             num_files_renamed += 1
-    print(f'Renamed {num_files_renamed} images.')
+    print(f'Photos: Renamed {num_files_renamed} images.')
 
 
 if __name__ == "__main__":

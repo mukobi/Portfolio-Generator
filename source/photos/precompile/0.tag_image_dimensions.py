@@ -1,8 +1,4 @@
-"""Compiles the contents for sites in ./content using templates in ./templates
-and outputs the static web content to ./output.
-
-Usage:
-`python compile.py` - Compile all sites.
+"""Wrires the dimensions of each image in Albums as a suffix in the filename.
 """
 
 import os

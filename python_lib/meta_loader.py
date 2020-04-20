@@ -25,6 +25,7 @@ def load_meta_tree(content_in):
     """
 
     meta_tree = collections.OrderedDict()
+    meta_tree['meta'] = None
     children = {}
     for filename in os.listdir(content_in):
         filepath = os.path.join(content_in, filename)

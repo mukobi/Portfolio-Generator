@@ -13,12 +13,18 @@ from jinja2 import Template
 
 from python_lib import meta_loader
 from python_lib import renderer
+from python_lib import repo_copier
 
 DEFAULT_VERBOSITY = 1
 
 DIR_ROOT = os.path.dirname(os.path.abspath(__file__))
 DIR_SRC = os.path.join(DIR_ROOT, 'source')
 DIR_OUTPUT = os.path.join(DIR_ROOT, 'output')
+
+REPO_OUTPUTS = {
+    'software': os.path.join(DIR_ROOT, './../sticksandstones'),
+    'photos': os.path.join(DIR_ROOT, './../Photography-Portfolio')
+}
 
 
 def main():
@@ -76,6 +82,9 @@ def compile_individual(name, verbosity):
 
     if verbosity >= 1:
         print(f'Compiled: {name}')
+
+    # copy stuff to output repository
+    repo_copier.copy_portfolio_single(dir_output, REPO_OUTPUTS[name], ['.'])
 
 
 if __name__ == "__main__":

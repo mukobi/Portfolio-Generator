@@ -40,6 +40,10 @@ body {
     width: 50%;
 }
 
+.header > div:not(:last-child) {
+    margin-bottom: 64px;
+} 
+
 .header .title h1,
 .header .links a {
 font-size: 2.5em;
@@ -63,6 +67,15 @@ font-size: 2.5em;
     margin: 0;
 }
 
+.header .description {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.header .description br {
+    /* enable br for smaller screens to force equal two line spacing */
+    display: none;
+}
 
 
 /*** gallery content ***/
@@ -113,20 +126,20 @@ font-size: 2.5em;
 @media screen and (max-width: 1380px) {
     .header > div {
         width: 100%;
-    }
-
-    .header .title {
-        margin-bottom: 32px;
-    }   
+    }  
 
     .header .title h1.fixed {
         left: 64px;
         right: 64px;
     }
 
+    .header .description br {
+        display: inline;
+    }
+
     .copyright {
-        left: 16px;
-        right: 16px;
+        left: 8px;
+        right: 8px;
     }
 }
 
@@ -156,5 +169,15 @@ font-size: 2.5em;
     }
     .header .links a {
         margin: 0;
+    }
+
+    .header .description {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .header .description br {
+        display: none;
     }
 }

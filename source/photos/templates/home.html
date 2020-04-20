@@ -38,7 +38,7 @@
         if album_content.meta.external_link is defined
         else photo_source %}
     <a href="{{url}}" class="photo-container"
-        style="flex-grow: {{aspect_ratio}}; min-width: min(100vw, {{300 * aspect_ratio}}px)">
+        style="flex-grow: {{100 * aspect_ratio}}; min-width: min(100vw, {{300 * aspect_ratio}}px)">
         <img src="{{thumbnail_source}}" />
     </a>
 

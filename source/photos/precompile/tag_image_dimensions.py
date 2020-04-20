@@ -6,7 +6,6 @@ Usage:
 """
 
 import os
-import time
 from PIL import Image
 
 INCLUDED_FILE_EXTENSIONS = ['.jpg', '.jpeg', '.png']

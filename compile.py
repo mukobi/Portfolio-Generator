@@ -9,7 +9,6 @@ import os
 import json
 import shutil
 import argparse
-from jinja2 import Template
 
 from python_lib import meta_loader
 from python_lib import renderer
@@ -41,7 +40,7 @@ def main():
     args = parser.parse_args()
 
     # run compilation
-    if args.site == None:
+    if args.site is None:
         compile_all(args.verbosity)
     else:
         compile_individual(args.site, args.verbosity)

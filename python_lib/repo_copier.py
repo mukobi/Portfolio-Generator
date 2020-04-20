@@ -41,17 +41,17 @@ def __delete_folder(folder, ignore_delete_prefix):
                 os.unlink(file_path)
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path)
-        except OSError as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
+        except OSError as error:
+            print('Failed to delete %s. Reason: %s' % (file_path, error))
 
 
 def __copy_folder(src, dst, symlinks=False, ignore=None):
     """Copies everything in src folder into dst folder.
     """
     for item in os.listdir(src):
-        s = os.path.join(src, item)
-        d = os.path.join(dst, item)
-        if os.path.isdir(s):
-            shutil.copytree(s, d, symlinks, ignore)
+        item_source = os.path.join(src, item)
+        item_destination = os.path.join(dst, item)
+        if os.path.isdir(item_source):
+            shutil.copytree(item_source, item_destination, symlinks, ignore)
         else:
-            shutil.copy2(s, d)
+            shutil.copy2(item_source, item_destination)

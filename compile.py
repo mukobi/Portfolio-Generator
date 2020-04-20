@@ -49,7 +49,7 @@ def main():
 
 def compile_all(verbosity):
     """Compiles all site at once."""
-    for name in os.listdir(DIR_SRC):
+    for name in os.listdir(DIR_SRC):  # TODO: multithread
         compile_individual(name, verbosity)
 
 
@@ -68,7 +68,7 @@ def compile_individual(name, verbosity):
 
     # run precompile code
     if os.path.exists(dir_input_precompile):
-        for executable_name in os.listdir(dir_input_precompile):
+        for executable_name in sorted(os.listdir(dir_input_precompile)):
             os.system(os.path.join(dir_input_precompile, executable_name))
 
     # load in stuff

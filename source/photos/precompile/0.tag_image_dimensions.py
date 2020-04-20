@@ -5,6 +5,7 @@ import os
 from PIL import Image
 
 INCLUDED_FILE_EXTENSIONS = ['.jpg', '.jpeg', '.png']
+THUMBNAIL_OUTPUT_PREXIF = 'thumb.'
 
 DIR_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR_ALBUMS = os.path.join(DIR_PROJECT_ROOT, 'content/Albums')
@@ -28,6 +29,8 @@ def main():
     # append the image dimensions into the name of each file
     num_files_renamed = 0
     for file_path in image_file_paths:
+        if os.path.basename(file_path).startswith(THUMBNAIL_OUTPUT_PREXIF):
+            continue  # ignore existing thumbnails
         # get image dimensions as ' widthxheight'
         with Image.open(file_path) as img:
             width, height = img.size

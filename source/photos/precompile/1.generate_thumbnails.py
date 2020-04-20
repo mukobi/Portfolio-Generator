@@ -31,7 +31,7 @@ def main():
     num_thumbnails_generated = 0
     for input_path in image_file_paths:
         if os.path.basename(input_path).startswith(THUMBNAIL_OUTPUT_PREXIF):
-            continue  # don't make a thumbnail of a thumbnail
+            continue  # ignore existing thumbnails
         output_path = os.path.join(
             os.path.dirname(input_path), THUMBNAIL_OUTPUT_PREXIF + os.path.basename(input_path))
         if os.path.isfile(output_path):

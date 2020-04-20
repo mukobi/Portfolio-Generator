@@ -1,4 +1,4 @@
-"""Wrires the dimensions of each image in Albums as a suffix in the filename.
+"""Writes the dimensions of each image in Albums as a suffix in the filename.
 """
 
 import os

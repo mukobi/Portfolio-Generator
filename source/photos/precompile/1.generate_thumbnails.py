@@ -5,6 +5,8 @@ import os
 from PIL import Image
 
 THUMBNAIL_COMPRESSION_RATIO = 0.25
+MIN_DIMENSION_PIXELS = 800
+MAX_DIMENSION_PIXELS = 2000
 INCLUDED_FILE_EXTENSIONS = ['.jpg', '.jpeg', '.png']
 THUMBNAIL_OUTPUT_PREXIF = 'thumb.'
 
@@ -40,6 +42,8 @@ def main():
             image = Image.open(input_path)
             size = [image.size[0] * THUMBNAIL_COMPRESSION_RATIO,
                     image.size[1] * THUMBNAIL_COMPRESSION_RATIO]
+            size = [min(max(dimension, MIN_DIMENSION_PIXELS), MAX_DIMENSION_PIXELS)
+                    for dimension in size]
             image.thumbnail(size, Image.ANTIALIAS)
             image.save(output_path, 'JPEG')
             num_thumbnails_generated += 1

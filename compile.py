@@ -22,7 +22,8 @@ DIR_OUTPUT = os.path.join(DIR_ROOT, 'output')
 
 REPO_OUTPUTS = {
     'software': os.path.join(DIR_ROOT, './../sticksandstones'),
-    'photos': os.path.join(DIR_ROOT, './../Photography-Portfolio')
+    'photos': os.path.join(DIR_ROOT, './../Photography-Portfolio'),
+    'film': os.path.join(DIR_ROOT, './../Film-Portfolio')
 }
 
 

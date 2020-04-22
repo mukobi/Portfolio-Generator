@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{{root}}/res/css/style_main.css" />
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83fa904659.js" crossorigin="anonymous"></script>
+    {% block head_append %}{% endblock %}
+    <title>{{meta.title}}</title>
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+</html>

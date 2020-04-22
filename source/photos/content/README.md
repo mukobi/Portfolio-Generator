@@ -1,6 +1,6 @@
 # Photography - By Gabriel Mukobi
 
-A website for the photography portfolio of Gabriel Mukobi
+A website for the photography portfolio of Gabriel Mukobi.
 
 # Source
 

@@ -1,0 +1,4 @@
+page: Photography Portfolio
+external_link: https://photos.gabrielmukobi.com
+description: |
+  A minimalistic photography portfolio. Unlike most other grid-based photography gallery websites (e.g. Google Photos or 500px) which use JavaScript to calculate the width and height of each photo based on the screen size (slow and ugly), photos.gabrielmukobi.com uses no JavaScript and is entirely build on CSS3's flexbox API (fast and sexy)!

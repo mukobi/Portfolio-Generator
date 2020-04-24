@@ -128,7 +128,7 @@ body {
     height: auto;
     display: block;
     /* padding: 48px; */
-    border: 8px solid hsl(0, 0%, 2%);
+    border: 8px solid hsl(0, 0%, 4%);
     border-radius: 4px;
 }
 

@@ -1,3 +1,5 @@
+/*** css resets ***/
+
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -34,8 +36,18 @@ body {
 * {
     color: white;
     font-family: 'Barlow', sans-serif;
-    /*border: 1px solid teal;*/
 }
+
+
+/*** Element-Level Styles ***/
+
+h1,
+h2 {
+    font-weight: 700;
+}
+
+
+/*** Header ***/
 
 .head {
     height: 78%;

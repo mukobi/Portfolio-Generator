@@ -1,207 +1,208 @@
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  background-color: black;
-  transition: background-color 5000ms;
-  overflow-y: scroll;
+    background-color: black;
+    transition: background-color 5000ms;
+    overflow-y: scroll;
 }
 
-html, body {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+html,
+body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 * {
-  color: white;
-  font-family: 'Encode Sans Condensed', sans-serif;
-  margin: 0;
+    color: white;
+    margin: 0;
 }
 
 .line_white_space {
-  white-space: pre-line;
+    white-space: pre-line;
 }
 
 .head {
-  height: 60vh;
-  min-height: 500px;
-  position: relative;
+    height: 60vh;
+    min-height: 500px;
+    position: relative;
 }
 
-.head > .wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0, 0.4);
-  border: 1px solid rgba(255,255,255, 0.4);
-  padding: 4vw;
+.head>.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 4vw;
 }
 
 .title {
-  width: 90vw;
-  max-width: 500px;
-  margin: auto auto;
-  text-align: center;
+    width: 90vw;
+    max-width: 500px;
+    margin: auto auto;
+    text-align: center;
 }
 
 .about p {
-  font-size: 150%;
-  text-align: justify;
+    font-size: 150%;
+    text-align: justify;
 }
 
 .navigation {
-  height: 5vh;
-  min-height: 50px;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: space-between;
-  align-items: center;
+    height: 5vh;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
 }
 
-.navigation > a {
-  color: white;
-  display: block;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-grow: 1;
-  text-align: center;
-  text-decoration: none;
-  background-color: rgba(0,0,0, 0.4);
-  border: 1px solid rgba(255,255,255, 0.4);
-  transition: flex-grow 240ms;
-  font-size: 150%;
+.navigation>a {
+    color: white;
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: flex-grow 240ms;
+    font-size: 150%;
 }
 
-.navigation > a:hover {
-  color: white;
-  flex-grow: 2;
+.navigation>a:hover {
+    color: white;
+    flex-grow: 2;
 }
 
 @media only screen and (max-width: 600px) {
-  .head > .wrapper {
-    background-color: rgba(0,0,0,0);
-    border: none;
-  }
+    .head>.wrapper {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-  .navigation a.hide_under_500px {
-    display: none;
-  }
-
-  .about > p {
-    font-size: 120%;
-  }
-
-  .navigation {
-    flex-wrap: wrap;
-    height: 120px;
-  }
-
-  .navigation > a {
-    width: 50%;
-    height: 60px;
-    line-height: 60px;
-  }
+    .navigation a.hide_under_500px {
+        display: none;
+    }
+    .about>p {
+        font-size: 120%;
+    }
+    .navigation {
+        flex-wrap: wrap;
+        height: 120px;
+    }
+    .navigation>a {
+        width: 50%;
+        height: 60px;
+        line-height: 60px;
+    }
 }
 
 .content {
-  width: 99%;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    width: 99%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 
 @media only screen and (max-width: 460px) {
-  .content {
-    grid-gap: 0px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
+    .content {
+        grid-gap: 0px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
 
 .content p {
-  font-size: 130%;
+    font-size: 130%;
 }
 
 .content a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .content h3 {
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  transition: all 240ms;
-  position: relative;
-  top: 0;
-  line-height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    transition: all 240ms;
+    position: relative;
+    top: 0;
+    line-height: 40px;
 }
 
 .single_content.take-up-all-columns {
-  grid-column: 1 / end;
+    grid-column: 1 / end;
 }
 
 .single_content:hover h3 {
-  font-size: 40px;
-  text-decoration: underline;
-  top: -15px;
+    font-size: 40px;
+    text-decoration: underline;
+    top: -15px;
 }
 
 .content img {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 20px;
-  transition: all 240ms;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all 240ms;
 }
 
 .single_content:hover img {
-  padding: 0;
-  margin-bottom: 39px;
+    padding: 0;
+    margin-bottom: 39px;
 }
 
 .content p {
-  padding: 20px;
-  text-align: justify;
-  transition: all 240ms;
-  margin-bottom: 0;
-  position: relative;
-  top: 0;
-  text-decoration: none;
+    padding: 20px;
+    text-align: justify;
+    transition: all 240ms;
+    margin-bottom: 0;
+    position: relative;
+    top: 0;
+    text-decoration: none;
 }
 
 .single_content:hover p {
-  top: -10px;
+    top: -10px;
 }
+
 
 /* special effects */
 
 canvas.particles-js-canvas-el {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -5;
-  opacity:0.4;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -5;
+    opacity: 0.4;
 }

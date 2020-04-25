@@ -1,133 +1,134 @@
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  background-color: black;
-  transition: background-color 5000ms;
+    background-color: black;
+    transition: background-color 5000ms;
 }
 
-html, body {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+html,
+body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 * {
-  color: white;
-  font-family: 'Encode Sans Condensed', sans-serif;
-  /*border: 1px solid teal;*/
+    color: white;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    /*border: 1px solid teal;*/
 }
 
 .head {
-  height: 78%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+    height: 78%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.head > .wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0,0,0, 0.4);
-  border: 1px solid rgba(255,255,255, 0.4);
-  padding: 4vh;
+.head>.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 4vh;
 }
 
 .title {
-  width: 90vw;
-  max-width: 500px;
-  margin: auto auto;
-  text-align: center;
+    width: 90vw;
+    max-width: 500px;
+    margin: auto auto;
+    text-align: center;
 }
 
 .about p {
-  font-size: 150%;
-  text-align: justify;
+    font-size: 150%;
+    text-align: justify;
 }
 
-
 .bottom {
-  position: absolute;
-  bottom: 5vh;
-  left: 5vw;
-  right: 5vw;
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    right: 5vw;
 }
 
 .navigation {
-  height: 15vh;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: space-between;
-  align-items: center;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
 }
 
-.navigation > a {
-  display: block;
-  height: 100%;
-  line-height: 15vh;
-  flex-grow: 1;
-  text-align: center;
-  text-decoration: none;
-  background-color: rgba(0,0,0, 0.4);
-  border: 1px solid rgba(255,255,255, 0.4);
-  transition: flex-grow 240ms;
-  font-size: 150%;
-}
-
-.navigation > a:hover {
-  flex-grow: 2;
-  text-decoration: underline;
-}
-
-@media only screen and (max-width: 600px), only screen and (max-height: 500px) {
-  .head > .wrapper {
-    background-color: rgba(0,0,0,0);
-    border: none;
-  }
-
-  .navigation > a {
+.navigation>a {
+    display: block;
+    height: 100%;
+    line-height: 15vh;
+    flex-grow: 1;
+    text-align: center;
     text-decoration: none;
-  }
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: flex-grow 240ms;
+    font-size: 150%;
+}
+
+.navigation>a:hover {
+    flex-grow: 2;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px),
+only screen and (max-height: 500px) {
+    .head>.wrapper {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+    .navigation>a {
+        text-decoration: none;
+    }
 }
 
 @media only screen and (max-height: 400px) {
-  .about p {
-    font-size: 100%;
-  }
+    .about p {
+        font-size: 100%;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-  .about > p {
-    font-size: 100%;
-  }
-
-  .navigation {
-    flex-wrap: wrap;
-    height: 30vh;
-  }
-
-  .navigation > a {
-    width: 50%;
-    height: 50%;
-  }
+    .about>p {
+        font-size: 100%;
+    }
+    .navigation {
+        flex-wrap: wrap;
+        height: 30vh;
+    }
+    .navigation>a {
+        width: 50%;
+        height: 50%;
+    }
 }

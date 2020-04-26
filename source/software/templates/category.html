@@ -1,20 +1,10 @@
-{% extends 'base.html' %}
-
-{%set root = '..'%}
-
-{% block stylesheet %}
-{{ super() }}
-{# TODO: eliminate default style in the 2 stylesheets #}
-<link rel="stylesheet" href="{{root}}/res/css/style_sub.css" />
-{% endblock %}
-
-{% block body %}
-{% include 'components/navigation.html' %}
+{% extends 'base.html' %} {%set root = '..'%} {% block stylesheet %} {{ super() }} {# TODO: eliminate default style in the 2 stylesheets #}
+<link rel="stylesheet" href="{{root}}/res/css/style_sub.css" /> {% endblock %} {% block body %} {% include 'components/navigation.html' %}
 <div class="head">
     <div class="wrapper">
         <div class="title">
             <h1>{{meta.page|capitalize}}</h1>
-            <h2>Sticks and Stones Software</h2>
+            <h2><a href='{{root}}'>Sticks and Stones Software</a></h2>
         </div>
         <div class="about">
             <p class="line_white_space">

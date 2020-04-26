@@ -1,4 +1,5 @@
 /*** general style ***/
+
 * {
     margin: 0;
     padding: 0;
@@ -7,20 +8,39 @@
     text-shadow: 0 2px 6px black;
 }
 
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
 body {
     background-color: #0f0f0f;
 }
 
+
 /*** reusable classes ***/
+
 .fixed {
     position: fixed;
     z-index: 10;
 }
+
 .transparent {
     opacity: 0;
 }
 
+
 /*** header section ***/
+
 .header {
     padding: 64px 5vw;
     display: flex;
@@ -34,19 +54,19 @@ body {
     color: white;
 }
 
-.header > div {
+.header>div {
     flex-grow: 1;
     text-align: center;
     width: 50%;
 }
 
-.header > div:not(:last-child) {
+.header>div:not(:last-child) {
     margin-bottom: 64px;
-} 
+}
 
 .header .title h1,
 .header .links a {
-font-size: 2.5em;
+    font-size: 2.5em;
 }
 
 .header .title h1 {
@@ -112,6 +132,7 @@ font-size: 2.5em;
 
 
 /*** copyright ***/
+
 .copyright {
     right: 5vw;
     bottom: 5vw;
@@ -122,47 +143,44 @@ font-size: 2.5em;
 
 /*** responsive media queries ***/
 
-/* small desktop */
-@media screen and (max-width: 1380px) {
-    .header > div {
-        width: 100%;
-    }  
 
+/* small desktop */
+
+@media screen and (max-width: 1380px) {
+    .header>div {
+        width: 100%;
+    }
     .header .title h1.fixed {
         left: 64px;
         right: 64px;
     }
-
     .header .description br {
         display: inline;
     }
-
     .copyright {
         left: 8px;
         right: 8px;
     }
 }
 
+
 /* mobile */
+
 @media screen and (max-width: 750px) {
     .header .title h1,
     .header .links a {
-    font-size: 2em;
+        font-size: 2em;
     }
-
     .header {
-    padding: 16px 2vw;
+        padding: 16px 2vw;
     }
-
     .header .title {
         margin-bottom: 16px;
-    } 
-
+    }
     .header .title h1.fixed {
         left: 11px;
         right: 11px;
     }
-
     .header .links {
         display: flex;
         justify-content: space-around;
@@ -170,7 +188,6 @@ font-size: 2.5em;
     .header .links a {
         margin: 0;
     }
-
     .header .description {
         font-size: 1.2em;
     }

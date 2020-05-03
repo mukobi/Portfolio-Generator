@@ -2,5 +2,5 @@ page: Paypeer
 external_link: https://secret-meadow-61582.herokuapp.com/
 description: |
   A prototype user interface for an interactive web app for PayPeer, a company that enables easy exchanging and sending of cryptocurrencies.
-  
+  <br><br>
   This site was built as a front-end interface as part of a freelance-job. The successor to Paypeer is PieWallet which is an actually functioning cryptocurrency wallet and social network.

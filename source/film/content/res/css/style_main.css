@@ -151,7 +151,6 @@ body {
 .project-container .description {
     font-size: 1.1em;
     text-align: justify;
-    white-space: pre-line;
     text-decoration: none;
 }
 

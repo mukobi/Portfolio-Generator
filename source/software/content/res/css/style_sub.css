@@ -36,10 +36,6 @@ body {
     margin: 0;
 }
 
-.line_white_space {
-    white-space: pre-line;
-}
-
 .head {
     height: 60vh;
     min-height: 500px;

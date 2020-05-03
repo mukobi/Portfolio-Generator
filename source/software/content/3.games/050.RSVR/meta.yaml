@@ -2,5 +2,5 @@ page: Rogue Starfighter VR
 external_link: https://github.com/mukobi/Rogue-Starfighter-VR
 description: |
   Rogue Starfighter VR (RSVR) is an immersive virtual reality Star Wars X-wing flight simulator fan-game. In it, the player experiences the full scale and power of the space combat from a galaxy far, far, away behind the controls of an immersive and fully-interactive T-65B X-wing starfighter.
-
+  <br><br>
   My main goals in RSVR’s development were to create compelling cockpit control interactions driven by the player’s VR hands; to create a beautifully fun experience through highly detailed and customized models, VFX, shaders, and sound design; and to learn a lot about game development by building a full vertical slice of a large project.

@@ -1,6 +1,6 @@
 page: Homuncular Flexibility VR
 external_link: https://youtu.be/JyJ8WHgIZ40
 description: |
-  Homuncular Flexibility is a virtual reality experience that seeks to explore the mind's ability to "remap" the roles of the limbs in regards to how they are controlled by the brain for theraputic and psychological applications.
+  Homuncular Flexibility is a virtual reality experience that seeks to explore the mind's ability to "remap" the roles of the limbs in regards to how they are controlled by the brain for theraputic and psychological applications. In it, the movements of your arms and legs in real life affect your body in different ways in VR. This is a project for Stanford's Virtual Human Interaction Lab (VHIL). 
   <br><br>
-  To do this, I experimented with how the movements of your arms and legs in real life effect what you experience in VR via the avatar's movement (which was difficult when using inverse kinematic solvers built only for normal VR use). E.g. your arms might control your legs, or rotating a limb in real life might rotate it double in VR. This is a project for Stanford's Virtual Human Interaction Lab (VHIL). 
+  Responsible for: Everything except the lab and robot models.

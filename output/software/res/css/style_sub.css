@@ -37,8 +37,8 @@ body {
 }
 
 .head {
-    height: 60vh;
-    min-height: 500px;
+    height: 30vh;
+    min-height: 300px;
     position: relative;
 }
 
@@ -49,7 +49,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 4vw;
+    padding: 2vw;
 }
 
 .title {
@@ -126,7 +126,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
 }
 
 @media only screen and (max-width: 460px) {

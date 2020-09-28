@@ -37,6 +37,7 @@ body {
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.664);
 }
 
 
@@ -45,6 +46,13 @@ body {
 h1,
 h2 {
     font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+a {
+    text-shadow: 0 4px 4px black;
 }
 
 

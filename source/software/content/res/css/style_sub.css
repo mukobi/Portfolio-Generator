@@ -186,6 +186,10 @@ body {
     text-decoration: none;
 }
 
+.content p a {
+    text-decoration: underline;
+}
+
 .single_content:hover p {
     top: -10px;
 }

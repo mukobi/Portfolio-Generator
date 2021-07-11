@@ -16,6 +16,7 @@ DIR_ALBUMS = os.path.join(DIR_PROJECT_ROOT, 'content/Albums')
 
 def main():
     """Main execution function."""
+    
     # find all image file paths in Albums folder
     image_file_paths = []
     for root, _, files in os.walk(DIR_ALBUMS):
@@ -54,4 +55,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # main()

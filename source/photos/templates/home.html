@@ -24,30 +24,28 @@
 </div>
 </div>
 <div class="content">
-    {% for year, year_content in children.Albums.children.items() %}
-        {% for album, album_content in year_content.children.items() %}
-            {% for photo in album_content.files|sort(reverse=true) %}
+    {% for year, year_content in children.Albums.children.items() -%}
+        {% for album, album_content in year_content.children.items() -%}
+            {% for photo in album_content.files|sort(reverse=true) -%}
 
-                {% if not photo.startswith('thumb.') %}
+                {% if not photo.startswith('thumb.') -%}
+    {% set dominant_color = photo.split('.')[-3] -%}
+    {% set dimensions = photo.split('.')[-2].split('x') -%}
+    {% set aspect_ratio = dimensions[0]|float / dimensions[1]|float -%}
+    {% set photo_source = './Albums/' + year + '/' + album + '/' + photo -%}
+    {% set thumbnail_source = './Albums/' + year + '/' + album + '/thumb.' + photo -%}
+    {% set url = album_content.meta.external_link 
+        if album_content.meta.external_link is defined
+        else photo_source %}
+    <a href="{{url}}" class="photo-container" style="flex-grow: {{100 * aspect_ratio}};
+        min-width: min(100vw, {{300 * aspect_ratio}}px); background: #{{dominant_color}};">
+        <img src="{{thumbnail_source}}" />
+    </a>
+                {% endif -%}
 
-                    {% set dominant_color = photo.split('.')[-3] %}
-                    {% set dimensions = photo.split('.')[-2].split('x') %}
-                    {% set aspect_ratio = dimensions[0]|float / dimensions[1]|float %}
-                    {% set photo_source = './Albums/' + year + '/' + album + '/' + photo %}
-                    {% set thumbnail_source = './Albums/' + year + '/' + album + '/thumb.' + photo %}
-                    {% set url = album_content.meta.external_link 
-                        if album_content.meta.external_link is defined
-                        else photo_source %}
-                    <a href="{{url}}" class="photo-container" style="flex-grow: {{100 * aspect_ratio}};
-                        min-width: min(100vw, {{300 * aspect_ratio}}px); background: #{{dominant_color}};">
-                       <img src="{{thumbnail_source}}" />
-                    </a>
-
-                {% endif %}
-
-            {% endfor %}
-        {% endfor %}
-    {% endfor %}
+            {% endfor -%}
+        {% endfor -%}
+    {% endfor -%}
 </div>
 <p class="fixed copyright">All images copyright &copy; 2019-2020 Gabriel Mukobi</p>
 {% endblock %}

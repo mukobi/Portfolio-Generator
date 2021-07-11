@@ -30,6 +30,7 @@
 
                 {% if not photo.startswith('thumb.') %}
 
+                    {% set dominant_color = photo.split('.')[-3] %}
                     {% set dimensions = photo.split('.')[-2].split('x') %}
                     {% set aspect_ratio = dimensions[0]|float / dimensions[1]|float %}
                     {% set photo_source = './Albums/' + year + '/' + album + '/' + photo %}
@@ -37,9 +38,9 @@
                     {% set url = album_content.meta.external_link 
                         if album_content.meta.external_link is defined
                         else photo_source %}
-                    <a href="{{url}}" class="photo-container"
-                        style="flex-grow: {{100 * aspect_ratio}}; min-width: min(100vw, {{300 * aspect_ratio}}px)">
-                       <img style="background: green;" src="{{photo_source}}" />  <!-- TODO change to thumbnail -->
+                    <a href="{{url}}" class="photo-container" style="flex-grow: {{100 * aspect_ratio}};
+                        min-width: min(100vw, {{300 * aspect_ratio}}px); background: #{{dominant_color}};">
+                       <img src="{{thumbnail_source}}" />
                     </a>
 
                 {% endif %}

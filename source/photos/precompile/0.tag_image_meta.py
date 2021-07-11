@@ -34,23 +34,23 @@ def main():
         if os.path.basename(file_path).startswith(THUMBNAIL_OUTPUT_PREXIF):
             continue  # ignore existing thumbnails
 
+        split_dot = os.path.basename(file_path).split('.')
+        if len(split_dot) == 4 and len(split_dot[1]) == 6:
+            continue  # ignore already renames images
+
         # append the dominant color of the image
-        # dominant_color = '%02x%02x%02x' % ColorThief(file_path).get_color(10)
-        # print(dominant_color)
+        dominant_color = '%02x%02x%02x' % ColorThief(file_path).get_color(10)
 
         # append the image dimensions as 'widthxheight' into the name of each file
         with Image.open(file_path) as img:
             width, height = img.size
-            dimension_string = f'.{width}x{height}'
+            dimension_string = f'{width}x{height}'
         base_name, file_extension = os.path.splitext(file_path)
         if not base_name.endswith(dimension_string):
-            new_file_path = base_name + dimension_string + file_extension
+            new_file_path = f'{base_name}.{dominant_color}.{dimension_string}{file_extension}'
+            print(f'Processed {new_file_path}')
             os.rename(file_path, new_file_path)
             num_files_renamed += 1
-        else:
-            new_file_path = '.'.join(base_name.split('.')[:-1]) + file_extension
-            print(new_file_path)
-            os.rename(file_path, new_file_path)
     print(f'Photos: Renamed {num_files_renamed} images.')
 
 

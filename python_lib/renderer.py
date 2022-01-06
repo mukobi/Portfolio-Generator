@@ -4,9 +4,8 @@ This includes both loading meta.yaml files into a dictionary tree and copying
 over all other files to the output directory.
 """
 import os
-import json
 import shutil
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Environment, FileSystemLoader
 
 
 def render_site(dir_content, site_out, meta_tree, dir_template):
@@ -40,13 +39,18 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
 
             if os.path.isdir(file_path):
                 # ignore order number from name in output
-                folder_name_without_numer = file_name.split('.', 1)[-1]
+                folder_name_without_number = file_name.split('.', 1)[-1]
                 # render the child directory, scoped to its own child meta tree
-                recurse(file_path, os.path.join(dir_output, folder_name_without_numer),
-                        meta_tree['children'][folder_name_without_numer])
+                recurse(file_path, os.path.join(dir_output, folder_name_without_number),
+                        meta_tree['children'][folder_name_without_number])
 
             elif os.path.isfile(file_path) and file_name != 'meta.yaml':
                 # copy file to output director
                 # copy2 copies metadata and permissions into a directory
                 shutil.copy2(file_path, dir_output)
+                if file_path.endswith('.css'):
+                    # print("Prefixing " + file_path)
+                    # autoprefix the output file
+                    pass
+
     recurse(dir_content, site_out, meta_tree)

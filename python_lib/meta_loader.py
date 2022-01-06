@@ -3,8 +3,8 @@
 This includes only loading meta.yaml files into a dictionary tree, ignoring other files.
 """
 import os
-import yaml
 import collections
+import yaml
 
 
 def __children_sort_key(item_tuple):

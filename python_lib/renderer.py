@@ -4,6 +4,7 @@ This includes both loading meta.yaml files into a dictionary tree and copying
 over all other files to the output directory.
 """
 import os
+import sys
 import shutil
 from jinja2 import Environment, FileSystemLoader
 
@@ -48,9 +49,14 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
                 # copy file to output director
                 # copy2 copies metadata and permissions into a directory
                 shutil.copy2(file_path, dir_output)
-                if file_path.endswith('.css'):
-                    # print("Prefixing " + file_path)
-                    # autoprefix the output file
-                    pass
+                    
 
+    # Kick off a recursive rendering
     recurse(dir_content, site_out, meta_tree)
+
+    # autoprefix the output css files
+    exit_code = os.system(f'cd {site_out} && npx postcss **.css --no-map --config {dir_content}/postcss.config.js -r')
+    if exit_code != 0:
+        sys.exit(f'Autoprefixer error: exit code {exit_code}.\n'
+               'Ensure you have installed the required node packages:\n'
+               '    $ npm i')

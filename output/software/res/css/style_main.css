@@ -2,7 +2,6 @@
 
 html {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -10,12 +9,13 @@ html {
 *:before,
 *:after {
     -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
 
 body {
     background-color: black;
+    -webkit-transition: background-color 5000ms;
+    -o-transition: background-color 5000ms;
     transition: background-color 5000ms;
 }
 
@@ -70,7 +70,9 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 4vh;
@@ -98,28 +100,45 @@ a {
 .navigation {
     height: 15vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .navigation>a {
     display: block;
     height: 100%;
     line-height: 15vh;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     text-align: center;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.4);
+    -webkit-transition: flex-grow 240ms, -webkit-box-flex 240ms;
+    transition: flex-grow 240ms, -webkit-box-flex 240ms;
+    -o-transition: flex-grow 240ms;
     transition: flex-grow 240ms;
+    transition: flex-grow 240ms, -webkit-box-flex 240ms, -ms-flex-positive 240ms;
     font-size: 150%;
 }
 
 .navigation>a:hover {
-    flex-grow: 2;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     text-decoration: underline;
 }
 
@@ -145,7 +164,8 @@ only screen and (max-height: 500px) {
         font-size: 100%;
     }
     .navigation {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         height: 30vh;
     }
     .navigation>a {

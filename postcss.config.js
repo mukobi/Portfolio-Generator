@@ -6,5 +6,6 @@ module.exports = {
                 '>5%'
             ]
         }),
+        require('postcss-minify'),
     ],
 }

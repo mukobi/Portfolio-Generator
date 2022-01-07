@@ -54,8 +54,8 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
     # Kick off a recursive rendering
     recurse(dir_content, site_out, meta_tree)
 
-    # autoprefix the output css files
-    exit_code = os.system(f'cd {site_out} && npx postcss **.css --no-map --config {dir_content}/postcss.config.js -r')
+    # autoprefix and minify the output css files
+    exit_code = os.system(f'cd {site_out} && npx postcss **.css --no-map --config {dir_content} -r')
     if exit_code != 0:
         sys.exit(f'Autoprefixer error: exit code {exit_code}.\n'
                'Ensure you have installed the required node packages:\n'

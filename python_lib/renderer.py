@@ -49,7 +49,7 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
                 # copy file to output director
                 # copy2 copies metadata and permissions into a directory
                 shutil.copy2(file_path, dir_output)
-                    
+
 
     # Kick off a recursive rendering
     recurse(dir_content, site_out, meta_tree)

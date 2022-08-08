@@ -139,3 +139,6 @@ cython_debug/
 
 # npm
 node_modules
+
+# output files (can all be generated from source)
+output

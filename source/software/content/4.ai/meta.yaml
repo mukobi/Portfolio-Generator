@@ -1,5 +1,5 @@
 template: categories/ai.html
-page: ai
+page: artificial intelligence
 title: AI - Gabriel Mukobi Software
 description: |
-  This page is currently in development, please check back soon!
+  Machine learning/deep learning/reinforcement learning/other AI projects with a focus on AI safety, including both technical research projects and some community resources for helping others learn.

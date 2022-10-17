@@ -1,0 +1,6 @@
+page: UE4ML
+external_link: https://docs.unrealengine.com/latest/en-US/API/Plugins/UE4ML/
+description: |
+  A plugin to facilitate the use deep reinforcement learning in Unreal Engine by exposing UE4 as an OpenAI Gym environment and a suite of Deep RL samples project to test the plugin. 
+  <br><br>
+  Responsible for: Cleaning up and improving the plugin for release, creating all the sample projects while working for Epic Games.

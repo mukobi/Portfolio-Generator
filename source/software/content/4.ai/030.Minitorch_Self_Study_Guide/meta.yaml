@@ -1,0 +1,6 @@
+page: Minitorch Self-Study Guide
+external_link: https://github.com/mukobi/Minitorch-Self-Study-Guide-SAIA/blob/main/README.md
+description: |
+  While implementing Minitorch, a Python implementation of the core functionality of the popular PyTorch machine learning library, and getting a better understanding of how autodifferentiation, tensors, and other PyTorchic things work, I created this study guide to help others learn as well.
+  <br><br>
+  Responsible for: All of the study guide, none of Minitorch.

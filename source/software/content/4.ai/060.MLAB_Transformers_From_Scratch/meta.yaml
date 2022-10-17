@@ -1,0 +1,6 @@
+page: MLAB Transformers From Scratch
+external_link: https://github.com/mukobi/MLAB-Transformers-From-Scratch
+description: |
+  A documented and unit-tested repo to help you learn how to build transformer neural network models from scratch.
+  <br><br>
+  Responsible for: Taking the transformer days from the original MLAB repo, creating a clean starter file with class/method stubs and clear docstrings, adding unit tests, and implementing a clean solution file.

@@ -1,0 +1,6 @@
+page: Concept-Based Explanations
+external_link: https://github.com/mukobi/Unsupervised-Concept-Based-Explanations-For-Sentiment-Analysis
+description: |
+  A slightly new technique building off prior work for unsupervised learning of concept-based explanations of language models operating on the task of sentiment analysis. Compared to black-box baseline models, performance is comparable, but the coherency of discovered concepts is sometimes mixed.
+  <br><br>
+  Responsible for: Almost all of the code, most of the paper.

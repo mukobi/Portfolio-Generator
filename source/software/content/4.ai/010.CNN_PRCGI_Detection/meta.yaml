@@ -1,0 +1,6 @@
+page: CNNs for CGI Detection
+external_link: https://github.com/mukobi/CS221-Project
+description: |
+  A binary CNN classifier to distinguish between real photographic images and photorealistic computer-generated images that achieves 96% test accuracy on a custom dataset.
+  <br><br>
+  Responsible for: Approximately half of the work.

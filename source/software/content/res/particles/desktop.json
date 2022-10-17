@@ -1,50 +1,56 @@
-{"particles":{
-    "number":{
-      "value":80
+{
+  "particles": {
+    "number": {
+      "value": 80
     },
-    "color":{
-      "value":"fff"
+    "color": {
+      "value": "random"
     },
-    "shape":{
-      "type":"star"
-    },
-    "opacity":{
-      "value":0.7
-    },
-    "size":{
-      "value":10,
-      "random":true,
-      "anim":{
-        "enable":true,
-        "speed":20,
-        "sync":false
+    "shape": {
+      "type": "image",
+      "image": {
+        "src": "./android.png",
+        "height": 100,
+        "width": 85
       }
     },
-    "line_linked":{
-      "enable":false,
-      "width":1
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 0.2,
+        "sync": false
+      }
     },
-    "move":{
-      "out_mode":"out",
-      "speed":0.2,
-      "random":true
+    "size": {
+      "value": 35,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 0
+    },
+    "move": {
+      "out_mode": "bounce",
+      "speed": 3,
+      "random": true,
+      "direction": "none",
+      "bounce": true
     }
   },
-  "interactivity":{
-    "detect_on":"window",
-    "events":{
-      "onhover":{
-        "enable":false,
-        "mode":"repulse"
-      },
-      "onclick":{
-        "enable":true,
-        "mode":"push"
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
       }
     },
-    "modes":{
-      "push":{
-        "particles_nb":3
+    "modes": {
+      "bubble": {
+        "distance": 150,
+        "size": 60
       }
     }
   }

@@ -2,6 +2,9 @@
     {% if meta.page != 'home' %}
     <a href="{{root}}">Home</a>
     {% endif %}
+    {% if meta.page != 'ai' %}
+    <a href="{{root}}/ai">AI</a>
+    {% endif %}
     {% if meta.page != 'games' %}
     <a href="{{root}}/games">Games</a>
     {% endif %}
@@ -10,8 +13,5 @@
     {% endif %}
     {% if meta.page != 'desktop' %}
     <a href="{{root}}/desktop">Desktop</a>
-    {% endif %}
-    {% if meta.page != 'mobile' %}
-    <a href="{{root}}/mobile">Mobile</a>
     {% endif %}
 </div>

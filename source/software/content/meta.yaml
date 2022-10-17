@@ -1,4 +1,5 @@
 template: home.html
 page: home
+header: home
 title: Software
 description: This is a software development portfolio to show my <a href='ai'>AI projects</a>, <a href='games'>games</a>, <a href='web'>websites</a>, and <a href='desktop'>desktop software</a>. I'm committed to creating simple yet effective software solutions to impactful and interesting problems.

@@ -1,5 +1,6 @@
 template: categories/web.html
 page: web
+header: web
 title: Web - Gabriel Mukobi Software
 description: |
   Some of the websites and web apps that I've developed using technologies like HTML5, CSS3, JavaScript, jQuery, React, Flask, Bootstrap, and Wordpress.

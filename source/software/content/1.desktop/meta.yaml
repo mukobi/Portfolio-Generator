@@ -1,4 +1,5 @@
 template: categories/desktop.html
 page: desktop
+header: desktop
 title: Desktop - Gabriel Mukobi Software
 description: Some of the desktop software I've developed using technologies like Java, Python, C++, C#, .NET, and XNA.

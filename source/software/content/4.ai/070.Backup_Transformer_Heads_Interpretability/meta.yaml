@@ -1,0 +1,6 @@
+page: Backup Transformer Heads are Robust to Ablation Distribution
+external_link: https://itch.io/jam/interpretability/rate/1789630
+description: |
+  Some quick and dirty mechanistic interpretability research into backup name mover heads for indirect object identification (IOI) in GPT-2 small, which won 2nd place in Apart Research's second Interpretability Hackathon.
+  <br><br>
+  Responsible for: Deciding on the research question, engineering and running the mean ablation experiments, evaluating and interpreting results. 

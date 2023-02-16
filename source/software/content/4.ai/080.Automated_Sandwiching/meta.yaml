@@ -1,0 +1,6 @@
+page: Automated Sandwiching
+external_link: https://itch.io/jam/scaleoversight/rate/1923992
+description: |
+  An automated Sandwiching experimental framework for evaluating scalable oversight techniques by having language models talk to each other. We won 1st place in all categories at Apart Research's Scale Oversight Hackathon.
+  <br><br>
+  Responsible for: Generating the initial research question and contributing roughly half of the theoretical development, the Python implementation, and the paper writeup.

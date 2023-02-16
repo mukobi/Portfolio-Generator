@@ -1,0 +1,6 @@
+page: LLM Multiplication Tables
+external_link: https://itch.io/jam/interpretability/rate/1789630
+description: |
+  Evaluating the 2-digit multiplication abilities of various language models using 🤗Transformers and the OpenAI API for fun and to possibly inspire some mechanistic interpretability research.
+  <br><br>
+  Responsible for: Everything.

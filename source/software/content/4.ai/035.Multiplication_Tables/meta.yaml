@@ -1,6 +1,6 @@
 page: LLM Multiplication Tables
-external_link: https://itch.io/jam/interpretability/rate/1789630
+external_link: https://github.com/mukobi/LLM-Multiplication-Tables
 description: |
-  Evaluating the 2-digit multiplication abilities of various language models using 🤗Transformers and the OpenAI API for fun and to possibly inspire some mechanistic interpretability research.
+  Evaluating the 2-digit multiplication abilities of various language models using 🤗Transformers and the OpenAI API for fun and to possibly inspire some mechanistic interpretability research. By graphing more nuanced metrics than accuracy like the number of digits different from the answer, we can see clearer patters in emergent multiplication capabilities.
   <br><br>
   Responsible for: Everything.

@@ -1,5 +1,5 @@
 page: SuperHF
-external_link: https://github.com/openfeedback/superhf
+external_link: ./SuperHF/SuperHF_Paper.pdf
 description: |
   In-progress research project supervised by Silas Alberti (adv. Chris Re) to develop alternatives to reinforcement learning from human feedback (RLHF) which use supervised learning instead of RL as well as open-source implementations of reward modelling and RLHF baselines for others to make similar progress.
   <br><br>

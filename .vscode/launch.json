@@ -12,6 +12,18 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "Compile Photos",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/compile.py",
+            "console": "integratedTerminal",
+            "args": [
+                "photos",
+                "-v",
+                "2"
+            ]
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

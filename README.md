@@ -9,3 +9,9 @@ I got really tired of having to manually update the HTML of my statically-hosted
 Instead, for any of my portfolio sites (including the one you're looking at now), this Python script reads meta files stored as YAML for each page or project, evaluates them against a set of templates using Jinja2, and copies over all other source files like images, JS, or CSS. The compiled HTML and copied files are neatly placed together, responsive CSS makes everything dynamically fit together well, and I can freely and efficiently share my work on a static site host and CDN.
 
 [See here for my portfolio sites](https://gabrielmukobi.com/#portfolio) built using this tool.
+
+## Special Compilation Notes
+
+### Photos
+
+- If adding new photos, run the 2 scripts in the `precompile` folder first. These add metadata and generate thumbnails for the dense gallery functionality.

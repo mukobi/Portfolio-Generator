@@ -14,4 +14,4 @@ Instead, for any of my portfolio sites (including the one you're looking at now)
 
 ### Photos
 
-- If adding new photos, run the 2 scripts in the `precompile` folder first. These add metadata and generate thumbnails for the dense gallery functionality.
+- If adding new photos, you may need to run the 2 scripts in the `precompile` folder first. These add metadata and generate thumbnails for the dense gallery functionality. They should be run automatically by the compilation script, but you can also run them manually if it's not working.

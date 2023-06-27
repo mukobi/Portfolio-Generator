@@ -6,6 +6,8 @@ over all other files to the output directory.
 import os
 import sys
 import shutil
+from datetime import datetime
+
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -21,6 +23,7 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
     template_env = Environment(
         loader=FileSystemLoader(dir_template)
     )
+    current_time = datetime.utcnow()
 
     def recurse(dir_content, dir_output, meta_tree):
         os.makedirs(dir_output, exist_ok=True)  # make dir if doesn't exist
@@ -30,7 +33,7 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
             my_meta = meta_tree['meta']
             if 'template' in my_meta.keys():
                 template = template_env.get_template(my_meta['template'])
-                rendered = template.render(meta_tree)
+                rendered = template.render(meta_tree, current_time=current_time)
                 file_out_path = os.path.join(dir_output, 'index.html')
                 with open(file_out_path, 'w') as file:
                     file.write(rendered)
@@ -50,7 +53,6 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
                 # copy2 copies metadata and permissions into a directory
                 shutil.copy2(file_path, dir_output)
 
-
     # Kick off a recursive rendering
     recurse(dir_content, site_out, meta_tree)
 
@@ -58,5 +60,5 @@ def render_site(dir_content, site_out, meta_tree, dir_template):
     exit_code = os.system(f'cd {site_out} && npx postcss **.css --no-map --config {dir_content} -r')
     if exit_code != 0:
         sys.exit(f'Autoprefixer error: exit code {exit_code}.\n'
-               'Ensure you have installed the required node packages:\n'
-               '    $ npm i')
+                 'Ensure you have installed the required node packages:\n'
+                 '    $ npm i')

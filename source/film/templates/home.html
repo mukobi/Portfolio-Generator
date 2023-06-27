@@ -26,9 +26,9 @@
     {% for project, project_content in year_content.children.items() %}
 
     {% set thumbnail_source = './Projects/' + year + '/' + project + '/thumbnail.jpg'%}
-    {% set url = project_content.meta.external_link 
-        if project_content.meta.external_link is defined
-        else '#' %}
+    {% set url = project_content.meta.external_link
+    if project_content.meta.external_link is defined
+    else '#' %}
     <a href="{{url}}" class="project-container">
         <img src="{{thumbnail_source}}" />
         <p class="title">{{project_content.meta.title}}</p>
@@ -38,5 +38,6 @@
     {% endfor %}
     {% endfor %}
 </div>
-<p class="copyright">Copyright &copy; <a href="https://gabrielmukobi.com"></a>2020 Gabriel Mukobi</a></p>
+<p class="copyright">Copyright &copy; <a href="https://gabrielmukobi.com"></a>{{ current_time.year }} Gabriel Mukobi</a>
+</p>
 {% endblock %}

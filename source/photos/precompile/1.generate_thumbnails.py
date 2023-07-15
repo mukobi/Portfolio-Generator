@@ -45,14 +45,13 @@ def main():
                     image.size[1] * THUMBNAIL_COMPRESSION_RATIO]
             size = [min(max(dimension, MIN_DIMENSION_PIXELS), MAX_DIMENSION_PIXELS)
                     for dimension in size]
-            image.thumbnail(size, Image.ANTIALIAS)
+            image.thumbnail(size)
             image.save(output_path, 'JPEG')
             num_thumbnails_generated += 1
         except IOError:
             print(f'cannot create thumbnail for "{input_path}"')
 
     print(f'Photos: Generated {num_thumbnails_generated} thumbnail images.')
-
 
 if __name__ == "__main__":
     main()

@@ -9,6 +9,7 @@ import os
 import json
 import shutil
 import argparse
+import subprocess
 
 from python_lib import meta_loader
 from python_lib import renderer
@@ -69,7 +70,7 @@ def compile_individual(name, verbosity):
     # run precompile code
     if os.path.exists(dir_input_precompile):
         for executable_name in sorted(os.listdir(dir_input_precompile)):
-            os.system(os.path.join(dir_input_precompile, executable_name))
+            subprocess.call("python " + os.path.join(dir_input_precompile, executable_name))
 
     # load in stuff
     meta_tree = meta_loader.load_meta_tree(dir_input_content)

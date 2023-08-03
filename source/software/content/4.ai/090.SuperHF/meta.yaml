@@ -1,6 +1,6 @@
 page: SuperHF
-external_link: ./SuperHF/SuperHF_Paper.pdf
+external_link: .
 description: |
-  In-progress research project supervised by Silas Alberti (adv. Chris Re) to develop alternatives to reinforcement learning from human feedback (RLHF) which use supervised learning instead of RL as well as open-source implementations of reward modelling and RLHF baselines for others to make similar progress.
+  In-progress research project to develop alternatives to reinforcement learning from human feedback (RLHF) which use supervised learning instead of PPO-based RL to not change general capabilities while leading to better downstream safety performance.
   <br><br>
-  Responsible for: Co-leading the branch of the project focused on developing Supervised Learning from Human Feedback (SuperHF).
+  Responsible for: Co-leading the branch of the project focused on developing Supervised Iterative Learning from Human Feedback (SuperHF).

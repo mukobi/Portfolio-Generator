@@ -9,12 +9,18 @@ import os
 import shutil
 
 
-def copy_portfolio_single(source, destination, ignore_delete_prefix):
+def copy_portfolio_single(source, destination, ignore_delete_prefix, clone_command=None):
     """Copies a rendered portfolio to destination folder.
 
     Deletes everything originally in destination except top-leveel items that
     start with any of the ignore_delete_prefixes.
     """
+    if not os.path.isdir(destination):
+        message = f'Destination repo does not exist: {destination}'
+        if clone_command:
+            message += f'\nRun: {clone_command}'
+        raise FileNotFoundError(message)
+
     # remove everything in destination that isn't protected
     __delete_folder(destination, ignore_delete_prefix)
     # copy stuff over

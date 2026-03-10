@@ -28,6 +28,10 @@ REPO_OUTPUTS = {
     'film': os.path.join(DIR_ROOT, './../Film-Portfolio')
 }
 
+REPO_CLONE_COMMANDS = {
+    'software': 'git clone https://github.com/mukobi/sticksandstones ../sticksandstones',
+}
+
 
 def main():
     """Main execution function."""
@@ -86,7 +90,12 @@ def compile_individual(name, verbosity):
         print(f'Compiled: {name}')
 
     # copy stuff to output repository
-    repo_copier.copy_portfolio_single(dir_output, REPO_OUTPUTS[name], ['.'])
+    repo_copier.copy_portfolio_single(
+        dir_output,
+        REPO_OUTPUTS[name],
+        ['.'],
+        clone_command=REPO_CLONE_COMMANDS.get(name),
+    )
 
 
 if __name__ == "__main__":

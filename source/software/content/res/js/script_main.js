@@ -2,7 +2,7 @@ var oldColor = "";
 
 $(document).ready(function() {
   changeBackground();
-  setInterval(changeBackground, 2000);
+  setInterval(changeBackground, 10000);
 });
 
 var changeBackground = function() {

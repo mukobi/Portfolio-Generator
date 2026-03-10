@@ -13,8 +13,6 @@ html {
 }
 
 body {
-    background-color: black;
-    transition: background-color 5000ms;
     overflow-y: scroll;
 }
 

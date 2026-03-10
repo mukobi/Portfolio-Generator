@@ -16,7 +16,7 @@ html {
 
 body {
     background-color: black;
-    transition: background-color 5000ms;
+    transition: background-color 10000ms;
 }
 
 html,

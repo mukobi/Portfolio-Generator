@@ -24,7 +24,7 @@
             }
         },
         "size": {
-            "value": 35,
+            "value": 20,
             "random": true
         },
         "line_linked": {
@@ -33,7 +33,7 @@
         },
         "move": {
             "out_mode": "bounce",
-            "speed": 3,
+            "speed": 2,
             "random": true,
             "direction": "none",
             "bounce": true
@@ -50,7 +50,7 @@
         "modes": {
             "bubble": {
                 "distance": 150,
-                "size": 60
+                "size": 40
             }
         }
     }

@@ -1,52 +1,55 @@
-{"particles":{
-    "number":{
-      "value":1000
+{
+  "particles": {
+    "number": {
+      "value": 1000
     },
-    "color":{
-      "value":"random"
+    "color": {
+      "value": "random"
     },
-    "shape":{
-      "type":["circle"]
+    "shape": {
+      "type": [
+        "circle"
+      ]
     },
-    "opacity":{
-      "value":0.3,
-      "random":true,
-      "anim":{
-        "enable":true,
-        "speed":0.2,
-        "sync":false
+    "opacity": {
+      "value": 0.3,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 0.1,
+        "sync": false
       }
     },
-    "size":{
-      "value":30,
-      "random":true,
-      "anim":{
-        "enable":true,
-        "speed":10
+    "size": {
+      "value": 20,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 6
       }
     },
-    "line_linked":{
-      "enable":false
+    "line_linked": {
+      "enable": false
     },
-    "move":{
-      "out_mode":"bounce",
-      "speed":2
+    "move": {
+      "out_mode": "bounce",
+      "speed": 1
     }
   },
-  "interactivity":{
-    "detect_on":"window",
-    "events":{
-      "onhover":{
-        "enable":true,
-        "mode":"repulse"
+  "interactivity": {
+    "detect_on": "window",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
       },
-      "onclick":{
-        "enable":false
+      "onclick": {
+        "enable": false
       }
     },
-    "modes":{
-      "repulse":{
-        "distance":100
+    "modes": {
+      "repulse": {
+        "distance": 66
       }
     }
   }

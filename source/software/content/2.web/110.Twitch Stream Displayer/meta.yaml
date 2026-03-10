@@ -2,3 +2,4 @@ page: Twitch Stream Displayer
 external_link: https://codepen.io/mukobi/full/RZXgeY/
 description: |
   This Twitch stream displayer allows you to see the status of several popular channels on Twitch, an online streaming service. Check out who is streaming, find descriptions of what they are streaming, and click the banners to go to the streams.
+hidden: true

@@ -17,6 +17,7 @@ the 2 stylesheets #}
 </div>
 <div class="content">
     {% for key, value in children.items() %}
+    {% if value.meta.hidden is not defined or not value.meta.hidden %}
     {% set thumbnail_name = 'thumbnail.png' if 'files' in value and 'thumbnail.png' in value.files else 'thumbnail.jpg' %}
     <div class="single_content">
         <a href="{{value.meta.external_link if 'external_link' in value.meta else './' + key}}">
@@ -27,6 +28,7 @@ the 2 stylesheets #}
             </p>
         </a>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

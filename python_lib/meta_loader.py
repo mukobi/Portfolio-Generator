@@ -12,7 +12,7 @@ def __children_sort_key(item_tuple):
     try:
         return int(item_tuple[0].split('.')[0])
     except ValueError:
-        return 0  # defult sort to back
+        return 0  # default sort to back
 
 
 def load_meta_tree(content_in):
@@ -21,7 +21,7 @@ def load_meta_tree(content_in):
     Reads through the directory `content_in`. All `meta.yaml` files encountered
     are built into a dictionary that is returned.
 
-    Note: operates recursively, so don't try any simbolic linking and shit.
+    Note: operates recursively, so don't try any symbolic linking and such.
     """
 
     meta_tree = collections.OrderedDict()

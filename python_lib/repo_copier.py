@@ -1,7 +1,7 @@
 
 """Copies a rendered portfolio to destination folder.
 
-Deletes everything originally in destination except top-leveel items that
+Deletes everything originally in destination except top-level items that
 start with any of the ignore_delete_prefixes.
 """
 
@@ -40,7 +40,7 @@ def __delete_folder(folder, ignore_delete_prefix):
                 ignore = True
         if ignore:
             continue
-        # otherwise, delete that thang
+        # otherwise, delete it
         file_path = os.path.join(folder, filename)
         try:
             if os.path.isfile(file_path) or os.path.islink(file_path):

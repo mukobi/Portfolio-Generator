@@ -1,6 +1,6 @@
 page: SuperHF
 external_link: https://arxiv.org/abs/2310.16763
 description: |
-  LLM post-training research projects to develop alternatives to reinforcement learning from human feedback (RLHF) that use supervised learning instead of PPO-based RL and don't change general capabilities while leading to better downstream human preference performance.
+  An LLM post-training research project to develop alternatives to reinforcement learning from human feedback (RLHF) that use supervised learning instead of PPO-based RL and don't change general capabilities while leading to better downstream human preference performance.
   <br><br>
   Responsible for: Co-leading the branch of the project focused on developing Supervised Iterative Learning from Human Feedback (SuperHF).

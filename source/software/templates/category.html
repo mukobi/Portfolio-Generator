@@ -17,9 +17,10 @@ the 2 stylesheets #}
 </div>
 <div class="content">
     {% for key, value in children.items() %}
+    {% set thumbnail_name = 'thumbnail.png' if 'files' in value and 'thumbnail.png' in value.files else 'thumbnail.jpg' %}
     <div class="single_content">
         <a href="{{value.meta.external_link if 'external_link' in value.meta else './' + key}}">
-            <img src="./{{key}}/thumbnail.jpg" />
+            <img src="./{{key}}/{{thumbnail_name}}" />
             <h3>{{value.meta.page}}</h3>
             <p class="content_description">
                 {{value.meta.description}}

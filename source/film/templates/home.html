@@ -25,7 +25,8 @@
     {% for year, year_content in children.Projects.children.items() %}
     {% for project, project_content in year_content.children.items() %}
 
-    {% set thumbnail_source = './Projects/' + year + '/' + project + '/thumbnail.jpg'%}
+    {% set thumbnail_name = 'thumbnail.png' if 'files' in project_content and 'thumbnail.png' in project_content.files else 'thumbnail.jpg' %}
+    {% set thumbnail_source = './Projects/' + year + '/' + project + '/' + thumbnail_name %}
     {% set url = project_content.meta.external_link
     if project_content.meta.external_link is defined
     else '#' %}

@@ -1,4 +1,0 @@
-Jinja2
-pyyaml
-Pillow
-colorthief

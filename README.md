@@ -2,6 +2,20 @@
 
 Generates my portfolio sites using Python, YAML, and Jinja2 and statically serves them over GitHub pages.
 
+## Setup
+
+This repo uses `uv` for Python dependency management.
+
+```bash
+uv sync
+```
+
+Run the compiler with either:
+
+```bash
+uv run python compile.py
+```
+
 ## About 
 
 I got really tired of having to manually update the HTML of my statically-hosted software portfolio, so I decided to be a real programmer and write a tool to automate it. Gone are the days of copy-pasting the previous project's div, searching around for all the right spots to change the titles and descriptions, and then getting frustrated when I want to reorder things or change a similar detail across multiple pages.

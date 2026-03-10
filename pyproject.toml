@@ -1,0 +1,15 @@
+[project]
+name = "portfolio-generator"
+version = "0.1.0"
+description = "Static portfolio site generator built with Jinja2 and YAML."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "colorthief",
+  "jinja2",
+  "pillow",
+  "pyyaml",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,6 @@
+page: Welfare Diplomacy
+external_link: https://arxiv.org/abs/2310.08901
+description: |
+  A benchmark for language model cooperation built around a general-sum variant of Diplomacy where agents must trade off military conquest against domestic welfare, enabling clearer evaluation of cooperative capabilities and exploitability in multi-agent settings.
+  <br><br>
+  Responsible for: Leading the project and co-authoring the paper.
